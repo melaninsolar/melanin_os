@@ -8,9 +8,9 @@ Transform your Linux system into a Whive mining powerhouse with Melanin OS. Foll
 - A minimum of 8GB USB drive is required for the installer.
 - **Important**: Back up all crucial data from the device intended for Melanin OS installation.
 
-## Step 1: Download Melanin OS Installer
+## Step 1: Download Ubuntu OS Installer
 
-1. Navigate to the [Ubuntu 22.04.4 LTS repository](https://ubuntu.com/download/desktop/thank-you?version=22.04.4&architecture=amd64)
+1. Navigate to the [Desktop Ubuntu 22.04.4 LTS repository](https://ubuntu.com/download/desktop/thank-you?version=22.04.4&architecture=amd64) OR [Raspberry PI Ubuntu 22.04.4 LTS repository](https://ubuntu.com/download/raspberry-pi/thank-you?version=22.04.4&architecture=desktop-arm64+raspi)
 2. Select and Save the ISO file of your choice to your local system.
 
 ## Step 2: Create a Bootable USB Drive
@@ -41,7 +41,7 @@ After OS installation:
 1. Open Terminal in Ubuntu.
 2. Download run.sh:
     ```bash
-    wget https://github.com/melaninsolar/melanin_os/run.sh
+    wget https://raw.githubusercontent.com/melaninsolar/melanin_os/main/run.sh
     ```
 3. Make it executable:
     ```bash
