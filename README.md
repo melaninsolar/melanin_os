@@ -1,4 +1,4 @@
-# Melanin OS Installation Guide
+# Melanin OS Installation Guide 001
 
 Transform your Linux system into a Whive mining powerhouse with Melanin OS. Follow these steps to install Melanin OS along with Melanin Click for optimized mining.
 
@@ -10,7 +10,7 @@ Transform your Linux system into a Whive mining powerhouse with Melanin OS. Foll
 
 ## Step 1: Download Melanin OS Installer
 
-1. Navigate to the [Start OS repository](https://github.com/Start9Labs/start-os/releases/tag/v0.3.5.1)
+1. Navigate to the [Ubuntu 22.04.4 LTS repository](https://ubuntu.com/download/desktop/thank-you?version=22.04.4&architecture=amd64)
 2. Select and Save the ISO file of your choice to your local system.
 
 ## Step 2: Create a Bootable USB Drive
@@ -38,7 +38,7 @@ Use `Rufus` or `balenaEtcher` on Windows or the `dd` command on Linux/macOS to c
 
 After OS installation:
 
-1. Open Terminal in Start OS.
+1. Open Terminal in Ubuntu.
 2. Download run.sh:
     ```bash
     wget https://github.com/melaninsolar/melanin_os/run.sh
@@ -66,4 +66,3 @@ For installation issues, consult the Melanin OS and Melanin Click FAQs or commun
 You're now set up with Melanin OS and Melanin Click, ready to mine Whive efficiently. Connect with the community on Telegram or Discord for support and tips.
 
 *Note: Adjust installation steps as necessary for your hardware specifications and requirements.*
-
