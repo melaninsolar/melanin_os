@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the Melanin Click download URL
-MELANIN_CLICK_URL="https://raw.githubusercontent.com/melaninsolar/melanin_click/main/melaninclick.sh"
+MELANIN_CLICK_URL="https://raw.githubusercontent.com/melaninsolar/melanin_click/main/melanin_click.sh"
 
 # Download Melanin Click
 echo "Downloading Melanin Click..."
@@ -21,7 +21,7 @@ chmod +x melaninclick.sh
 
 # Run Melanin Click
 echo "Starting Melanin Click..."
-./melaninclick.sh
+./melanin_click.sh
 
 # Prompt for user configuration
 echo "Please follow the on-screen prompts to configure Melanin Click."
