@@ -17,7 +17,7 @@ fi
 
 # Make Melanin Click executable
 echo "Making Melanin Click executable..."
-chmod +x melaninclick.sh
+chmod +x melanin_click.sh
 
 # Run Melanin Click
 echo "Starting Melanin Click..."
