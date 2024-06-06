@@ -9,7 +9,7 @@
 set -e
 
 # Define the Melanin Click download URL
-MELANIN_CLICK_URL="https://raw.githubusercontent.com/melaninsolar/melanin_click/main/melanin_click_alpha.sh"
+MELANIN_CLICK_URL="https://raw.githubusercontent.com/melaninsolar/melanin_click/alpha/melanin_click_alpha.sh"
 
 # Define the rest interval and duration
 MINING_INTERVAL=3600  # Mining for 1 hour

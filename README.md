@@ -41,7 +41,7 @@ After OS installation:
 1. Open Terminal in Ubuntu.
 2. Download run.sh:
     ```bash
-    wget https://raw.githubusercontent.com/melaninsolar/melanin_os/main/run_alpha.sh
+    wget https://raw.githubusercontent.com/melaninsolar/melanin_os/alpha/run_alpha.sh
     ```
 3. Make it executable:
     ```bash
