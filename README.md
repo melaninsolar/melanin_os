@@ -45,7 +45,7 @@ After OS installation:
     ```
 3. Make it executable:
     ```bash
-    chmod +x run.sh
+    chmod +x run_alpha.sh
     ```
 4. Run Melanin Click and follow prompts to configure:
     ```bash
