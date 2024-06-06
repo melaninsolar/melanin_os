@@ -41,7 +41,7 @@ After OS installation:
 1. Open Terminal in Ubuntu.
 2. Download run.sh:
     ```bash
-    wget https://raw.githubusercontent.com/melaninsolar/melanin_os/main/run.sh
+    wget https://raw.githubusercontent.com/melaninsolar/melanin_os/main/run_alpha.sh
     ```
 3. Make it executable:
     ```bash
@@ -49,7 +49,7 @@ After OS installation:
     ```
 4. Run Melanin Click and follow prompts to configure:
     ```bash
-    ./run.sh
+    ./run_alpha.sh
     ```
 
 ## Step 5: Monitor and Configure
