@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ========================================================================
-# run_alpha.sh
+# Melanin OS for Linux  - run_alpha.sh
 # This script downloads and executes melanin_click_alpha.sh, then starts 
 # the Whive miner with periodic rest intervals to prevent overheating.
 # ========================================================================
@@ -21,7 +21,7 @@ log() {
 }
 
 # Welcome message
-log "Welcome to the Melanin Click setup script!"
+echo "Welcome to the Melanin Click setup script!"
 
 # Disclaimer
 echo "DISCLAIMER: This script will install software on your system. Ensure you have sufficient permissions and have backed up your important data. Proceeding indicates acceptance of any risks involved."
@@ -32,27 +32,42 @@ if [[ "$answer" != "y" ]]; then
 fi
 
 # Download Melanin Click
-log "Downloading Melanin Click..."
+echo "Downloading Melanin Click..."
 wget $MELANIN_CLICK_URL
 
 # Check if the download was successful
 if [ $? -eq 0 ]; then
-    log "Download completed successfully."
+    echo "Download completed successfully."
 else
-    log "Failed to download Melanin Click. Please check the URL and try again."
+    echo "Failed to download Melanin Click. Please check the URL and try again."
     exit 1
 fi
 
 # Make Melanin Click executable
-log "Making Melanin Click executable..."
+echo "Making Melanin Click executable..."
 chmod +x melanin_click_alpha.sh
 
 # Run Melanin Click
-log "Starting Melanin Click..."
+echo "Starting Melanin Click..."
 ./melanin_click_alpha.sh
 
 # Prompt for user configuration
-log "Please follow the on-screen prompts to configure Melanin Click."
+echo "Please follow the on-screen prompts to configure Melanin Click."
+
+# Create a new default wallet if it doesn't exist
+if ! "$install_path/bin/whive-cli" listwallets | grep -q 'default_wallet'; then
+    echo "Creating default wallet..."
+    "$install_path/bin/whive-cli" createwallet "default_wallet"
+fi
+
+# Load the default wallet
+echo "Loading default wallet..."
+"$install_path/bin/whive-cli" loadwallet "default_wallet"
+
+# Generate new address for miner
+echo "Getting new Whive address for mining"
+NEWADDRESS=$("$install_path/bin/whive-cli" getnewaddress)
+echo "Your new Whive address: $NEWADDRESS"
 
 # Mining loop
 while true; do
