@@ -51,19 +51,6 @@ chmod +x melanin_click_alpha.sh
 echo "Starting Melanin Click..."
 ./melanin_click_alpha.sh
 
-# Prompt for user configuration
-echo "Please follow the on-screen prompts to configure Melanin Click."
-
-# Create a new default wallet if it doesn't exist
-if ! "$install_path/bin/whive-cli" listwallets | grep -q 'default_wallet'; then
-    echo "Creating default wallet..."
-    "$install_path/bin/whive-cli" createwallet "default_wallet"
-fi
-
-# Load the default wallet
-echo "Loading default wallet..."
-"$install_path/bin/whive-cli" loadwallet "default_wallet"
-
 # Generate new address for miner
 echo "Getting new Whive address for mining"
 NEWADDRESS=$("$install_path/bin/whive-cli" getnewaddress)
