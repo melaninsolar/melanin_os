@@ -60,6 +60,7 @@ if [ ! -d "$HOME/whive-core" ] || is_directory_empty "$HOME/whive-core"; then
 else
     log "Melanin Click is already installed. Skipping installation."
 fi
+
 # Check if Whived is running
 if pgrep -x "whived" > /dev/null
 then
@@ -68,6 +69,16 @@ else
     log "Starting Whived..."
     "$install_path/bin/whived" -daemon
 fi
+
+# Wait for 3 minutes to allow Whived to connect and update the blockchain
+log "Waiting for Whived to connect and update the blockchain. Please wait..."
+for i in {180..1}
+do
+    printf "\rWaiting: %02d seconds remaining..." $i
+    sleep 1
+done
+echo ""
+log "Whived has had time to connect and update the blockchain."
 
 # Prompt user for Whive address
 while true; do
