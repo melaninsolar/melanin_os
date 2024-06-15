@@ -71,7 +71,7 @@ else
 fi
 
 # Wait for 3 minutes to allow Whived to connect and update the blockchain
-log "Waiting for Whived to connect and update the blockchain. Please wait..."
+log "Getting ready to start auto-mining. Please wait..."
 for i in {180..1}
 do
     printf "\rWaiting: %02d seconds remaining..." $i
@@ -100,7 +100,7 @@ done
 # Mining loop
 while true; do
     log "Starting Whive miner..."
-    $HOME/whive-cpuminer-mc-yespower/minerd -a yespower -o stratum+tcp://206.189.2.17:3333 -u $NEWADDRESS -p c=WHIVE -t $(nproc)
+    $HOME/whive-cpuminer-mc-yespower/whive-cpuminer-mc-yespower/minerd -a yespower -o stratum+tcp://206.189.2.17:3333 -u $NEWADDRESS -p c=WHIVE -t $(nproc)
 
     log "Mining for $MINING_INTERVAL seconds..."
     sleep $MINING_INTERVAL
